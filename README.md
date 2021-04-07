@@ -11,4 +11,4 @@ Store this information in a human-readable file (csv or other text file or graph
 - Plot the temperatures for the hottest days of each provided year onto the same axis, over
 time of day.
 - Do the same for the coldest days of each year.
-- Perform one more analysis that you find interesting on the same data. (Compare the temperatures of different years at the same timestamp. Leap year's February 29th data points are removed.)
+- Perform one more analysis that you find interesting on the same data. (Compare the temperatures of different years at the same timestamp. Leap year's February 29th data points are removed. Also, given a user choice valid timestamps minimum, average and maximum temperature is displayed (Except 29th February 2016 timestamps).)
