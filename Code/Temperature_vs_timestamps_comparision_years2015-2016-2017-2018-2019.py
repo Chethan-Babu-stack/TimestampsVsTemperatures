@@ -68,4 +68,20 @@ for y in range(len(years)):
 plt.legend()
 plt.savefig('C:/Users/Chethan/Desktop/Fraunhofer/comparing_initial_100timestamps.png')
 
-    
+# Years 2015, 2016, 2017, 2018, 2019 temperatures are used
+# 29th February 2016 is not used
+average_temperatures = [(t1+t2+t3+t4+t5)/5 for t1,t2,t3,t4,t5 in zip(*temperatures)]
+min_temperatures = [min(t1,t2,t3,t4,t5) for t1,t2,t3,t4,t5 in zip(*temperatures)]
+max_temperatures = [max(t1,t2,t3,t4,t5) for t1,t2,t3,t4,t5 in zip(*temperatures)]
+
+d = input("""Enter the timestamp at which you want see the minimum, average, maximum temperature. 
+             Example: 201501011000 (for 1st January 2015 at 10:00): 
+             Please enter the valid timestamp between 1st January 2015 till 31st December 2019 (excluding 29th February 2016: leap year):  """)
+
+# Reference timestamps list of 2015 is used to identify index
+d =  '2015' + d[4:]  
+index = [index for index in range(len(timestamps)) if timestamps[index] == int(d)]
+
+print("Minimum temperature is: " + str(min_temperatures[index[0]]))
+print("Maximum temperature is: " + str(max_temperatures[index[0]]))
+print("Average temperature is: " + str(average_temperatures[index[0]]))
